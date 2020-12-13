@@ -97,7 +97,7 @@ function ifScrolled() {
     let y = 0;
     for(let i = 0; i < 1000; i++) {
         y += 0.001;
-        if(document.documentElement.scrollTop >= 0 && document.documentElement.scrollTop < heightNavTop * y) {
+        if(document.documentElement.scrollTop < heightNavTop * y) {
             nav.style.backgroundColor = "rgba(0, 0, 0, " + x + ")";
             return;
         }
