@@ -96,8 +96,10 @@ main {
 @media screen and (max-width: 1200px) {
     header {
         height: 550px;
-    } .name, .desc {
-        font-size: 15px;
+    } .name {
+        font-size: 22px;
+    } .desc {
+        font-size: 18px;
     } .icon {
         width: 55px;
         height: 55px;
@@ -108,9 +110,11 @@ main {
 @media screen and (max-width: 1000px) {
     header {
         height: 520px;
-    } .name, .desc {
-        font-size: 14px;
-    } .icon {
+    } .name {
+        font-size: 21px;
+    } .desc {
+        font-size: 17px;
+    }.icon {
         width: 50px;
         height: 50px;
     } .container {
@@ -120,8 +124,10 @@ main {
 @media screen and (max-width: 800px) {
     header {
         height: 490px;
-    } .name, .desc {
-        font-size: 13px;
+    } .name {
+        font-size: 20px;
+    } .desc {
+        font-size: 16px;
     } .icon {
         width: 45px;
         height: 45px;
@@ -135,8 +141,10 @@ main {
 @media screen and (max-width: 600px) {
     header {
         height: 460px;
-    } .name, .desc {
-        font-size: 12px;
+    } .name {
+        font-size: 19px;
+    } .desc {
+        font-size: 15px;
     } .icon {
         width: 40px;
         height: 40px;
@@ -150,8 +158,10 @@ main {
 @media screen and (max-width: 400px) {
     header {
         height: 430px;
-    } .name, .desc {
-        font-size: 11px;
+    } .name {
+        font-size: 18px;
+    } .desc {
+        font-size: 14px;
     } .icon {
         width: 35px;
         height: 35px;
@@ -165,8 +175,10 @@ main {
 @media screen and (max-width: 300px) {
     header {
         height: 400px;
-    } .name, .desc {
-        font-size: 10px;
+    } .name {
+        font-size: 17px;
+    } .desc {
+        font-size: 13px;
     } .icon {
         width: 30px;
         height: 30px;
