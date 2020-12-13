@@ -1,0 +1,195 @@
+body {margin: 0;}
+header {
+    height: 700px;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+}
+
+.option {padding: 20px;}
+a {color: white; text-decoration: none;}
+
+hr {
+    display: none;
+    width: 0%;
+}
+
+.myPhoto {
+    position: relative;
+    width: 18vw;
+    height: 18vw;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    top: 80px;
+    background-image: url("../img/pp.png");
+    background-size: 100%;
+}
+
+.description {
+    text-align: center;
+    position: relative;
+    top: 115px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.name, .desc {
+    font-family: cursive;
+}
+
+.line {
+    margin: 4px;
+}
+
+.icon {
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 25px 10px;
+}
+
+.container {
+    width: 240px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#github {
+    background-image: url("../img/github.png");
+    background-size: 100%;
+}
+
+#ig {
+    background-image: url("../img/ig.png");
+    background-size: 100%;
+}
+
+#fb {
+    background-image: url("../img/fb.png");
+    background-size: 100%;
+}
+
+.icon:hover {
+    filter: brightness(50%);
+}
+
+main {
+    height: 4000px;
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        height: 550px;
+    } .name, .desc {
+        font-size: 15px;
+    } .icon {
+        width: 55px;
+        height: 55px;
+    } .container {
+        width: 225px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    header {
+        height: 520px;
+    } .name, .desc {
+        font-size: 14px;
+    } .icon {
+        width: 50px;
+        height: 50px;
+    } .container {
+        width: 210px;
+    }
+}
+@media screen and (max-width: 800px) {
+    header {
+        height: 490px;
+    } .name, .desc {
+        font-size: 13px;
+    } .icon {
+        width: 45px;
+        height: 45px;
+    } .myPhoto {
+        width: 21vw; 
+        height: 21vw;
+    } .container {
+        width: 195px;
+    }
+}
+@media screen and (max-width: 600px) {
+    header {
+        height: 460px;
+    } .name, .desc {
+        font-size: 12px;
+    } .icon {
+        width: 40px;
+        height: 40px;
+    } .myPhoto {
+        width: 26vw; 
+        height: 26vw;
+    } .container {
+        width: 180px;
+    }
+}
+@media screen and (max-width: 400px) {
+    header {
+        height: 430px;
+    } .name, .desc {
+        font-size: 11px;
+    } .icon {
+        width: 35px;
+        height: 35px;
+    } .myPhoto {
+        width: 33vw;  
+        height: 33vw;
+    } .container {
+        width: 165px;
+    }
+}
+@media screen and (max-width: 300px) {
+    header {
+        height: 400px;
+    } .name, .desc {
+        font-size: 10px;
+    } .icon {
+        width: 30px;
+        height: 30px;
+    } .container {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 155px) {
+    .container {
+        width: 65vw;
+    } .icon {
+        width: 15vw;
+        height: 15vw;
+        margin: 5px;
+    } header {
+        height: 340px;
+    } 
+}
+
+@media screen and (max-width: 254px) {
+    .option {
+        display: none;
+    }
+}
+
