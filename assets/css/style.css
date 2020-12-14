@@ -1,6 +1,7 @@
 body {margin: 0;}
 header {
     height: 700px;
+    overflow: hidden;
 }
 
 nav {
@@ -194,9 +195,14 @@ main {
         width: 15vw;
         height: 15vw;
         margin: 5px;
-    } header {
-        height: 340px;
-    } 
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .option {
+        flex-grow: 1;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 254px) {
@@ -204,4 +210,3 @@ main {
         display: none;
     }
 }
-
