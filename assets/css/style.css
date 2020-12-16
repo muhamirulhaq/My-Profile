@@ -1,7 +1,8 @@
-body {margin: 0;}
+body {margin: 0; background-color: lightblue;}
 header {
     height: 700px;
     overflow: hidden;
+    background-image: linear-gradient(to bottom right, darkred, darkcyan);
 }
 
 nav {
@@ -15,7 +16,7 @@ nav {
 .option {padding: 20px;}
 a {color: white; text-decoration: none;}
 
-hr {
+.hr1, .hr2, .hr3, .hr4 {
     display: none;
     width: 0%;
 }
@@ -26,10 +27,10 @@ hr {
     height: 18vw;
     left: 0;
     right: 0;
+    top: 80px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    top: 80px;
     background-image: url("../img/pp.png");
     background-size: 100%;
 }
@@ -88,6 +89,42 @@ hr {
 
 .icon:hover {
     filter: brightness(50%);
+}
+
+.menuLogo {
+    display: none;
+    padding: 5px;
+    margin: 4px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: fixed;
+    color: white;
+    width: 40px;
+    height: 40px;
+} .menuLogo hr {
+    width: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.menuSide {
+    visibility: hidden;
+    position: fixed;
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    padding: 10px;
+}
+
+#sideHr {
+    border: 1px solid black;
+}
+
+.optionSide a {
+    color: black;
+}
+
+.optionSide a:hover {
+    color: darkred;
 }
 
 main {
@@ -198,15 +235,18 @@ main {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .option {
-        flex-grow: 1;
-        text-align: center;
+        display: none;
+    } .menuLogo {
+        display: block;
+    } .menuSide {
+        display: block;
     }
 }
 
-@media screen and (max-width: 254px) {
-    .option {
-        display: none;
+@media screen and (max-width: 170px) {
+    .menuSide {
+        width: 120%;
     }
 }

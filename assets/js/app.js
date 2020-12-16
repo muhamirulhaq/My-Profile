@@ -43,7 +43,7 @@ function Wipe(x) {
 
 // Underline Animation
 
-const menu = new Array(3);
+const menu = new Array(4);
 const hr = new Array(menu.length);
 const wipe = new Array(menu.length);
 
@@ -58,38 +58,12 @@ for(let i = 0; i < menu.length; i++) {
     menu[i].onmouseout = wipe[i].hidden;
 }
 
-// Background Header Animation
-
-const header = document.querySelector("header");
-
-let i = 0;
-let isMustBack = false;
-
-let a = i;
-let b = 150;
-
-let j = 50;
-let isMustBack2 = false;
-
-let c = j;
-let d = 0;
-
-setInterval(function() {
-    header.style.backgroundImage = "linear-gradient(to bottom right, rgb(" + 100 + ", " + j + ", " + j + "), rgb(" + 20 + ", " + i + ", " + i + "))";
-    if(i === b) isMustBack = true;
-    else if(i === a) isMustBack = false;
-    if(j === d) isMustBack2 = true;
-    else if(j === c) isMustBack2 = false;
-    i += isMustBack === true ? -1 : 1;
-    j -= isMustBack2 === true ? -1 : 1;
-},30);
-
 // If Scrolled
 
+const header = document.querySelector("header");
 const nav = document.querySelector("nav");
-const heightNavTop = header.offsetHeight - nav.offsetHeight;
 
-if(document.documentElement.scrollTop >= heightNavTop) nav.style.backgroundColor = "rgba(0, 0, 0, 1)";
+if(document.documentElement.scrollTop >= header.offsetHeight) nav.style.backgroundColor = "rgba(0, 0, 0, 1)";
 else nav.style.backgroundColor = nav.style.backgroundColor = "rgba(0, 0, 0, 0)";
 
 function ifScrolled() {
@@ -97,7 +71,7 @@ function ifScrolled() {
     let y = 0;
     for(let i = 0; i < 1000; i++) {
         y += 0.001;
-        if(document.documentElement.scrollTop < heightNavTop * y) {
+        if(document.documentElement.scrollTop < header.offsetHeight * y) {
             nav.style.backgroundColor = "rgba(0, 0, 0, " + x + ")";
             return;
         }
@@ -106,3 +80,42 @@ function ifScrolled() {
 }
 
 document.body.onscroll = ifScrolled;
+
+// Display Menu Side
+
+const menuLogo = document.querySelector(".menuLogo");
+const menuSide = document.querySelector(".menuSide");
+let rightStyle = 0-menuSide.offsetWidth;
+menuSide.style.right = rightStyle + "px";
+
+let isDisplaying = false;
+
+function displayMenuSide() {
+    if(isDisplaying === false) {
+        isDisplaying = true;
+
+        menuSide.style.visibility = "visible";
+        if(rightStyle <= 0-menuSide.offsetWidth) {
+            const sideDisplay = setInterval(function() {
+                if(rightStyle > -10) {
+                    isDisplaying = false
+                    clearInterval(sideDisplay);
+                }
+                menuSide.style.right = rightStyle + "px";
+                rightStyle+=5;
+            },1);
+        } else {
+            const sideHidden = setInterval(function() {
+                if(rightStyle <= 0-menuSide.offsetWidth) {
+                    isDisplaying = false
+                    menuSide.style.visibility = "hidden";
+                    clearInterval(sideHidden);
+                }
+                menuSide.style.right = rightStyle + "px";
+                rightStyle-=5;    
+            },1);
+        }
+    } 
+};
+
+menuLogo.onclick = displayMenuSide;
