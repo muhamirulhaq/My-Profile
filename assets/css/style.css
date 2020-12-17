@@ -2,7 +2,7 @@ body {margin: 0; background-color: lightblue;}
 header {
     height: 700px;
     overflow: hidden;
-    background-image: linear-gradient(to bottom right, darkred, darkcyan);
+    background-color: rgb(15, 15, 15);
 }
 
 nav {
@@ -22,6 +22,8 @@ a {color: white; text-decoration: none;}
 }
 
 .myPhoto {
+    filter: grayscale(100%);
+    border: 1px solid white;
     position: relative;
     width: 18vw;
     height: 18vw;
@@ -61,10 +63,11 @@ a {color: white; text-decoration: none;}
     height: 60px;
     border-radius: 50%;
     margin: 25px 10px;
+    border: 1px solid rgb(42, 42, 42);
 }
 
 .container {
-    width: 240px;
+    width: 246px;
     position: relative;
     left: 0;
     right: 0;
@@ -142,7 +145,7 @@ main {
         width: 65px;
         height: 65px;
     } .container {
-        width: 255px;
+        width: 261px;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -156,7 +159,7 @@ main {
         width: 60px;
         height: 60px;
     } .container {
-        width: 240px;
+        width: 246px;
     }
 }
 @media screen and (max-width: 800px) {
@@ -173,7 +176,7 @@ main {
         width: 21vw; 
         height: 21vw;
     } .container {
-        width: 225px;
+        width: 231px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -190,7 +193,7 @@ main {
         width: 26vw; 
         height: 26vw;
     } .container {
-        width: 210px;
+        width: 216px;
     }
 }
 @media screen and (max-width: 400px) {
@@ -207,7 +210,7 @@ main {
         width: 33vw;  
         height: 33vw;
     } .container {
-        width: 195px;
+        width: 201px;
     }
 }
 @media screen and (max-width: 300px) {
@@ -221,7 +224,7 @@ main {
         width: 35px;
         height: 35px;
     } .container {
-        width: 165px;
+        width: 171px;
     }
 }
 
@@ -242,11 +245,5 @@ main {
         display: block;
     } .menuSide {
         display: block;
-    }
-}
-
-@media screen and (max-width: 170px) {
-    .menuSide {
-        width: 120%;
     }
 }
