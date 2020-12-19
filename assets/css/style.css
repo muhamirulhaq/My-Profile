@@ -1,4 +1,4 @@
-body {margin: 0; background-color: black; background-attachment: fixed; background-size: 250%;}
+body {margin: 0; background-image: url("../img/bg2.jpg"); background-attachment: fixed; background-size: 250%;}
 header {
     height: 700px;
     overflow: hidden;
